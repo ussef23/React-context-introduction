@@ -1,0 +1,85 @@
+    $grey : #F5F5F6; 
+    $dark-grey : #E1E2E1;
+    $light-grey :#fafafa;
+    $border-grey :  1px solid $grey;
+    $purple : #9c27b0 ;
+    $dark-purple : #6a0080 ;
+    $light-purple : #d05ce3 ;
+    $border-purple :  1px solid $dark-purple;
+
+    
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        text-align: center;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+        font-size: 12px;
+    }
+    .container {
+        width : 100%;
+        padding: 20px;
+        margin : auto;
+        h1 { 
+            font-size : 18px;
+            background: $purple /* linear-gradient($dark-purple, $purple) */;
+            margin : 0;
+            width : 100%;
+            color: white;
+            padding: 12px;
+            text-transform: uppercase
+        }
+        .table {
+            box-shadow: 0 -5px 5px -5px rgba(0,0,0,0.75);
+            .tr {
+                width : 100%;
+                .td , .th {
+                    display: inline-block;
+                }
+                .td {
+                    width: 4.6%;
+                    background: linear-gradient($dark-grey, $grey);
+                    div { 
+                        padding: 7px; 
+                        cursor: pointer; 
+                    }
+                    input {
+                        padding:  6px;
+                        width : 100%;
+                    }
+                }
+                .th{
+                    width : 8%;
+                    padding: 7px;
+                    background: linear-gradient($dark-purple, $purple);
+                    color : white;
+                    font-weight: 600;
+                }
+            }
+            .tr + .tr {
+                border-top : $border-purple;
+           }
+        }
+        .chart-container {
+            width : 100%;
+            padding-top: 20px;
+            background: linear-gradient($grey, $light-grey);
+            .title {
+                width : 7%;
+                display: inline-block;
+            }
+            .chart {
+               width : 93%;
+               display: inline-block;
+            }
+        }
+
+        @media (min-width: 1200px) {
+             width : 1200px ; 
+        }
+    }
+    
+  
+
+    
+    
