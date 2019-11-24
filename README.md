@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `yarn server`
 
-Run the server app on [http://localhost:8000]
+Run the server app on [http://localhost:8000](http://localhost:8000)
 
 ### `yarn start`
 
