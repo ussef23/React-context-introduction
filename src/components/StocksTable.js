@@ -32,19 +32,21 @@ const StocksTable = () => {
         setTempValue(e.target.value)
     }
     const saveChanges = () => {
-        let updatedStock = _.find(stocks, { position: selectedElement.position })
-        const motion = {
-            ...updatedStock,
-            stocks: {
-                ...updatedStock.stocks,
-                [selectedElement.label]: Number(tempValue)
-            },
-            class : 'updated'
+        if (tempValue) {
+            let updatedStock = _.find(stocks, { position: selectedElement.position })
+            const motion = {
+                ...updatedStock,
+                stocks: {
+                    ...updatedStock.stocks,
+                    [selectedElement.label]: Number(tempValue)
+                },
+                class: 'updated'
+            }
+            dispatchMotions({
+                type: 'ADD_MOTION',
+                key: selectedElement.position, motion
+            })
         }
-        dispatchMotions({
-            type: 'ADD_MOTION',
-            key: selectedElement.position, motion
-        })
         setIsRunning(true)
         setSelectedElement({})
         setTempValue(null)
